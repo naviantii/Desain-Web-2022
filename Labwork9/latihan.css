@@ -1,0 +1,20 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: white;
+
+}
+
+.row{
+    margin: 10px;
+    padding: 10px;
+    background: lightgray;
+}
+
+.col{
+    margin: 20px;
+    padding: 10px;
+}
+p{
+    text-align: justify;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Calculator</title>
+    </head>
+    <body>
+        <h1 align="center">Simple Calculator</h1>
+        <hr><br><br>
+        
+        <center>
+            <form name="forms" action="#">
+            <table width="70%" border="0" cellpadding="0">
+                <tr>
+                    <td width="35%">Number 1</td>
+                    <td width="5%">:</td>
+                    <td width="30%"><input type="text" name="number1" id="txtNumber1" required></td>
+                </tr>
+                <tr>
+                    <td width="35%">Number 2</td>
+                    <td width="5%">:</td>
+                    <td width="30%"><input type="text" name="number2" id="txtNumber2" required></td>
+                </tr>
+            </table>
+        
+            <br><br>
+
+            <select name="chooseOption">
+                <option id="addition" value="addition"> + </option>
+                <option id="subtraction" value="subtraction" > - </option>
+                <option id="multiplication" value="multiplication"> * </option>
+                <option id="division" value="division"> / </option>
+            </select>
+            
+            <input type="button" value="=" onclick="count()"/>
+            
+            </form> 
+        </center>
+        <br><br><hr>
+    
+        
+    <script>
+        function count() {
+            var myForm = document.forms;
+            var number1 = eval(myForm.number1.value);
+            var number2 = eval(myForm.number2.value);
+            var option = myForm.chooseOption.value;
+
+            if (option == "addition") {
+                var result = number1 + number2;
+            }
+            else if (option == "subtraction") {
+                var result = number1 - number2;
+            }
+            else if (option == "multiplication") {
+                var result = number1 * number2;
+            }
+            else if (option == "division") {
+                var result = number1 / number2;
+            }
+
+            window.alert("The result of the operation is " + result)
+        }
+
+    </script>
+    </body>
+</html>
